@@ -53,13 +53,13 @@
              </ul>
            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
              <li id="homepading" class="nav-item">
-               <a  id="padingdo" class="nav-link " aria-current="page" href="index.html">Home</a>
+               <a  id="padingdo" class="nav-link active" aria-current="page" href="index.html">Home</a>
              </li>
              <li class="nav-item">
                 <a id="padingdo" class="nav-link" href="about.html">About</a>
               </li>
              <li class="nav-item">
-               <a id="padingdo" class="nav-link active" href="contact.html">Contact Us</a>
+               <a id="padingdo" class="nav-link" href="contact.html">Contact Us</a>
              </li>
              <li class="nav-item">
                <a id="padingdo" class="nav-link" href="service.html">Career</a>
@@ -88,7 +88,7 @@
       <div class="contact-form section-gap">
          <div class="wrapper">
             <div class="text-center">
-               <h1 style="font-size: 40px; color: #0E354F; ">Contact Us</h1>
+               <h1 style="font-size: 30px; color: #0E354F; ">Apply job in <span style="color: #FF9929;">V</span>helpp</h1>
             </div>
             <div class="contact-form" style="max-width: 450px; margin: 0 auto;">
                <div class="form-mid">
@@ -101,10 +101,18 @@
                            required="">
                      </div>
                      <div class="field">
-                        <input type="text" class="form-control" name="Subject" id="Subject" placeholder="Subject*"
+                        <input type="number" class="form-control" name="phone" id="phone" placeholder="Phone*"
                            required="">
                      </div>
-                     <textarea name="Message" class="form-control" id="Message" placeholder="Message*"
+                     <div class="field">
+                        <input type="text" class="form-control" name="jobrole" id="jobrole" placeholder="Job Role*"
+                           required="">
+                     </div>
+                     <div class="field">
+                        <input type="text" class="form-control" name="Subject" id="Subject" placeholder="Resume Link*"
+                           required="">
+                     </div>
+                     <textarea name="Message" class="form-control" id="Message" placeholder="Something about you*"
                         required=""></textarea>
                      <button style="background-color:#0E354F;display: block;" type="submit" class="btn btn-contact">Send Message</button>
                      <!-- <input type="button" class="btn btn-contact" onclick="sendmail();"  value="Send Message"> -->
@@ -127,13 +135,15 @@
       function sendmail() {
 
          var name = $('#Name').val();
+         var phone= $('#phone').val();
          var email = $('#Sender').val();
+         var jobrole=$('#jobrole').val();
          var subject = $('#Subject').val();
          var message = $('#Message').val();
 
          // var body = $('#body').val();
 
-         var Body = 'Name: ' + name + '<br>Email: ' + email + '<br>Subject: ' + subject + '<br>Message: ' + message;
+         var Body = 'Name: ' + name + '<br>Email: ' + email +'<br>Phone:' + phone +'<br>Job Role:' + jobrole + '<br>Resume Link: ' + subject + '<br>Message: ' + message;
          //console.log(name, phone, email, message);
 
          Email.send({
@@ -167,60 +177,6 @@
    </script>
    </script>
 
-    <!-- FOOTER -->
-    <div class="footer ">
-
-        <div class="footer_right ">
-            <div class="footer_usefullink">
-                <h2>SOCIAL MEDIA<br><br>
-                    <a href="https://twitter.com/Vhelpp_in" target="blank">Twitter</a><br><br>
-                    <a href="https://www.linkedin.com/company/vhelpp/?viewAsMember=true">Linkedin</a><br><br>
-                    <a href="https://www.facebook.com/Vhelpp-104191711897645 " target="_blank">Facebook</a><br><br>
-                    <a href="https://www.instagram.com/vhelpponline/">Instagram</a><br><br>
-                    </h2>
-            </div>
-            <div class="footer_socialmedia">
-                <h2>QUICK LINKS<br><br>
-                    <a href="index.html">Home</a><br><br>
-                    <a href="about.html">About</a><br><br>
-                    <a href="contact.html">Contact</a><br><br>
-                    <a href="service.html">Career</a><br><br>
-                    
-                    
-            </div>
-        </div>
-
-        <div class="footer_left ">
-            <!-- <a href="# "><img src="https://i.ibb.co/Bgb34df/newlogo.jpg "></a> -->
-            <p><strong><h4><span style="color: #FF9929;"> V</span></a>HELPP</h4></strong>
-            </p>
-
-            <div class="addressline ">
-
-                <p> New Delhi, India</p>
-                <div class="phone ">
-                    <!-- <a style="color:gray;" href="tel:+918789869147">Call Vhelpp  </a> -->
-                </div>
-                <!-- <div style="font-size: 22px;color: #d1d1d1;" class="phone">contact us</div> -->
-                <div style="font-size: 18px;color: #d1d1d1;" class="phone ">support@vhelpp.com</div>
-
-            </div>
-        </div>
-
-
-    </div>
-
-    <div class="copyright">All Rights are reserved by <a href="index.html"><span style="color: #FF9929;"> V</span></a>HELPP<br>copyright 2021 Reserved.
-        <!-- <p>Design and Developed by YUVRAJ JWALA</p> -->
-    </div>
-<!-- aos is here jwala -->
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    AOS.init({
-      offset: 120,
-      duration: 400,
-    });
-  </script> 
 </body>
 
 </html>
